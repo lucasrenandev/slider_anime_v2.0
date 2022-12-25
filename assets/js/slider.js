@@ -7,7 +7,7 @@ const randomButton = document.querySelector(".random-button")
 // Slide atual
 let currentSlide = 0
 
-// Próximo slider
+// Próximo slide
 function nextSlide() {
     sliderImage[currentSlide].classList.remove("active")
     currentSlide = (currentSlide + 1) % sliderImage.length
@@ -21,17 +21,17 @@ function previousSlide() {
     sliderImage[currentSlide].classList.add("active")
 }
 
-// Remover slider ativo
+// Remover slide ativo
 function hideSlide() {
     sliderImage.forEach(image => image.classList.remove("active"))
 }
 
-// Adicionar slider ativo
+// Adicionar slide ativo
 function showSlide() {
     sliderImage[currentSlide].classList.add("active")
 }
 
-// Slide alatório
+// Slide aleatório
 function randomSlide() {
     currentSlide = Math.floor(Math.random() * sliderImage.length)
     hideSlide()
